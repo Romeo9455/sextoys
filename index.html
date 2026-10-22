@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Velours — Boutique bien-être intime</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .card .pic {
+      position: relative;
+      overflow: hidden;
+    }
+    .card .pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      mix-blend-mode: overlay;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Vérification d’âge -->
+  <div id="gate">
+    <div class="box">
+      <h2>Velours</h2>
+      <p>Cette boutique est réservée aux personnes majeures. Confirmez que vous avez 18 ans ou plus pour accéder au site.</p>
+      <button class="btn" id="yes">J’ai 18 ans ou plus</button>
+      <a class="btn ghost" href="https://www.google.com">Quitter</a>
+    </div>
+  </div>
+
+  <!-- En-tête -->
+  <header>
+    <div class="wrap">
+      <a class="logo" href="#top">VELOURS</a>
+      <nav>
+        <a href="#boutique">Boutique</a>
+        <a href="#engagements">Engagements</a>
+        <a href="#newsletter">Newsletter</a>
+      </nav>
+      <button class="cartbtn" id="open">Panier (<span id="count">0</span>)</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Bannière -->
+    <div class="hero">
+      <div class="wrap">
+        <small>Bien-être intime · Haut de gamme</small>
+        <h1>Cultivez votre plaisir, avec élégance</h1>
+        <p>Une sélection raffinée d’accessoires de bien-être intime, choisis pour leur qualité, leur design et leur sécurité.</p>
+        <a class="btn" href="#boutique">Découvrir la boutique</a>
+        <a class="btn ghost" href="#engagements">Nos engagements</a>
+      </div>
+    </div>
+
+    <!-- Boutique -->
+    <section id="boutique">
+      <div class="wrap">
+        <div class="title">
+          <h2>La boutique</h2>
+          <p>Silicone médical, finitions soignées, emballage neutre</p>
+        </div>
+        <div class="cats" id="cats"></div>
+        
+        <!-- Grille des produits avec les images intégrées directement en HTML -->
+        <div class="grid" id="grid">
+          
+          <article class="card" data-cat="Stimulateurs">
+            <div class="pic" style="background:linear-gradient(145deg, #5C1D24, #B76E79)">
+              <span class="tag">Best-seller</span>
+              <img src="images/luceur.webp" alt="Lueur">
+            </div>
+            <div class="info">
+              <h3>Lueur</h3>
+              <p>Stimulateur compact, silicone satiné, 8 modes silencieux.</p>
+              <div class="row">
+                <span class="price">28 000 FCFA</span>
+                <button class="btn add" data-n="Lueur" data-p="28000">Ajouter</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-cat="Massage">
+            <div class="pic" style="background:linear-gradient(145deg, #D48C9E, #F9F5F3)">
+              <img src="images/laura.jpeg" alt="Soie">
+            </div>
+            <div class="info">
+              <h3>Soie</h3>
+              <p>Huile de massage sensuelle aux notes de vanille et d’amande.</p>
+              <div class="row">
+                <span class="price">19 500 FCFA</span>
+                <button class="btn add" data-n="Soie" data-p="19500">Ajouter</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-cat="Couples">
+            <div class="pic" style="background:linear-gradient(145deg, #1A1A1A, #9E2A2B)">
+              <span class="tag">Nouveau</span>
+              <img src="images/couleur_toys_2758.webp" alt="Éclat">
+            </div>
+            <div class="info">
+              <h3>Éclat</h3>
+              <p>Accessoire pour deux, télécommande discrète, rechargeable.</p>
+              <div class="row">
+                <span class="price">42 000 FCFA</span>
+                <button class="btn add" data-n="Éclat" data-p="42000">Ajouter</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-cat="Accessoires">
+            <div class="pic" style="background:linear-gradient(145deg, #2E2E2E, #5C1D24)">
+              <img src="images/sextoy12.webp" alt="Nuit">
+            </div>
+            <div class="info">
+              <h3>Nuit</h3>
+              <p>Masque et foulard en satin pour jouer avec les sens.</p>
+              <div class="row">
+                <span class="price">15 000 FCFA</span>
+                <button class="btn add" data-n="Nuit" data-p="15000">Ajouter</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-cat="Stimulateurs">
+            <div class="pic" style="background:linear-gradient(145deg, #B76E79, #5C1D24)">
+              <img src="images/Pour garcon.webp" alt="Aura">
+            </div>
+            <div class="info">
+              <h3>Aura</h3>
+              <p>Design ergonomique, motorisation silencieuse, étanche.</p>
+              <div class="row">
+                <span class="price">36 000 FCFA</span>
+                <button class="btn add" data-n="Aura" data-p="36000">Ajouter</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-cat="Soins">
+            <div class="pic" style="background:linear-gradient(145deg, #F9F5F3, #D48C9E)">
+              <span class="tag">Doux</span>
+              <img src="images/Garcon.avif" alt="Rosée">
+            </div>
+            <div class="info">
+              <h3>Rosée</h3>
+              <p>Lubrifiant à base d’eau, doux, sans parfum ni paraben.</p>
+              <div class="row">
+                <span class="price">12 000 FCFA</span>
+                <button class="btn add" data-n="Rosée" data-p="12000">Ajouter</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-cat="Couples">
+            <div class="pic" style="background:linear-gradient(145deg, #9E2A2B, #1A1A1A)">
+              <img src="images/vibro.jpg" alt="Duo">
+            </div>
+            <div class="info">
+              <h3>Duo</h3>
+              <p>Jeu de cartes et bougie de massage pour une soirée à deux.</p>
+              <div class="row">
+                <span class="price">31 000 FCFA</span>
+                <button class="btn add" data-n="Duo" data-p="31000">Ajouter</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-cat="Accessoires">
+            <div class="pic" style="background:linear-gradient(145deg, #5C1D24, #2E2E2E)">
+              <img src="images/ecrin.jpg" alt="Écrin">
+            </div>
+            <div class="info">
+              <h3>Écrin</h3>
+              <p>Pochette de rangement discrète et nettoyant spécial.</p>
+              <div class="row">
+                <span class="price">9 000 FCFA</span>
+                <button class="btn add" data-n="Écrin" data-p="9000">Ajouter</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Engagements -->
+    <section class="promise" id="engagements">
+      <div class="wrap p3">
+        <div><div class="ic">◆</div><h3>Livraison discrète</h3><p>Colis neutre, sans mention du contenu ni de la boutique sur l’emballage.</p></div>
+        <div><div class="ic">◆</div><h3>Matériaux sûrs</h3><p>Silicone de qualité médicale, sans phtalates, hypoallergénique.</p></div>
+        <div><div class="ic">◆</div><h3>Paiement confidentiel</h3><p>Libellé bancaire neutre et données protégées. Aucune revente.</p></div>
+        <div><div class="ic">◆</div><h3>Conseil bienveillant</h3><p>Une équipe à l’écoute pour vous guider, sans jugement.</p></div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="news" id="newsletter">
+      <div class="wrap">
+        <h2>Recevez nos nouveautés</h2>
+        <p>Conseils, nouveautés et offres privées, en toute discrétion.</p>
+        <form id="nl">
+          <input type="email" id="em" placeholder="Votre adresse e-mail" required>
+          <button class="btn" type="submit">S’inscrire</button>
+        </form>
+        <p id="nlmsg"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <b>VELOURS</b>
+      <p>Réservé aux personnes majeures · Paiement sécurisé · Livraison discrète<br>© 2026 Velours. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Panier -->
+  <aside id="drawer" aria-label="Panier">
+    <div class="drawer-head">
+      <h3>Votre panier</h3>
+      <button class="cartbtn" id="close">Fermer</button>
+    </div>
+    <div id="items"></div>
+    <div class="tot"><span>Total</span><span id="total">0 FCFA</span></div>
+    <button class="btn" id="order">Passer la commande</button>
+    <p class="note">Livraison discrète offerte dès 50 000 FCFA</p>
+  </aside>
+
+  <script>
+    (function () {
+      var cart = [];
+
+      function $(id) { return document.getElementById(id); }
+      function fmt(n) { return n.toLocaleString("fr-FR") + " FCFA"; }
+
+      /* Vérification d’âge */
+      try {
+        if (sessionStorage.getItem("v18") === "1") $("gate").classList.add("hide");
+      } catch (e) {}
+      $("yes").onclick = function () {
+        $("gate").classList.add("hide");
+        try { sessionStorage.setItem("v18", "1"); } catch (e) {}
+      };
+
+      /* Gestion des filtres par catégorie */
+      var cards = document.querySelectorAll(".card");
+      var categories = ["Tous"];
+      cards.forEach(function(card) {
+        var cat = card.dataset.cat;
+        if (categories.indexOf(cat) === -1) categories.push(cat);
+      });
+
+      var cur = "Tous";
+      function renderCats() {
+        $("cats").innerHTML = categories.map(function (c) {
+          return '<button class="chip' + (c === cur ? ' on' : '') + '" data-c="' + c + '">' + c + '</button>';
+        }).join("");
+        Array.prototype.forEach.call($("cats").children, function (b) {
+          b.onclick = function () { 
+            cur = b.dataset.c; 
+            renderCats(); 
+            filterGrid(); 
+          };
+        });
+      }
+
+      function filterGrid() {
+        cards.forEach(function(card) {
+          if (cur === "Tous" || card.dataset.cat === cur) {
+            card.style.display = "";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+
+      /* Gestion du panier */
+      function renderCart() {
+        $("count").textContent = cart.length;
+        $("items").innerHTML = cart.length
+          ? cart.map(function (x, i) {
+              return '<div class="it"><span>' + x.n + '<br><small>' + fmt(x.p) + '</small></span>' +
+                     '<button data-r="' + i + '">Retirer</button></div>';
+            }).join("")
+          : '<p class="empty">Votre panier est vide.</p>';
+        $("total").textContent = fmt(cart.reduce(function (s, x) { return s + x.p; }, 0));
+        Array.prototype.forEach.call($("items").querySelectorAll("button"), function (b) {
+          b.onclick = function () { cart.splice(+b.dataset.r, 1); renderCart(); };
+        });
+      }
+
+      document.querySelectorAll(".add").forEach(function (b) {
+        b.onclick = function () {
+          cart.push({ n: b.dataset.n, p: +b.dataset.p });
+          renderCart();
+          $("drawer").classList.add("open");
+        };
+      });
+
+      $("open").onclick = function () { $("drawer").classList.add("open"); };
+      $("close").onclick = function () { $("drawer").classList.remove("open"); };
+      $("order").onclick = function () {
+        if (!cart.length) return;
+        alert("Merci ! Cette démo n’enregistre pas de vraie commande. Le paiement sera branché à l’étape suivante.");
+      };
+
+      /* Newsletter */
+      $("nl").onsubmit = function (e) {
+        e.preventDefault();
+        $("nlmsg").textContent = "Merci, votre inscription est bien prise en compte.";
+        $("em").value = "";
+      };
+
+      renderCats();
+      renderCart();
+    })();
+  </script>
+</body>
+</html>
